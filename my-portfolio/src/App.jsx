@@ -1,7 +1,13 @@
 import React from "react";
-import { BrowserRouter ,Route ,Routes ,Link } from "react-router-dom";
-import Info from './info'
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faIdCard } from "@fortawesome/free-solid-svg-icons";
+import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import Info from './Info'
 import Social from './social'
+import Home from './Home'
 import './css/navbar.css'
 
 function App() {
@@ -10,16 +16,27 @@ function App() {
       <BrowserRouter>
         <nav>
           <div className="main-name">
-            <h5>My Portfolio</h5>
+            <p>My Portfolio</p>
           </div>
           <div className="link">
-            <Link to="/">Home</Link>
-            <Link to="/social">Social</Link>
+            <Link to="/">
+              <FontAwesomeIcon icon={faHome} /> Home
+            </Link>
+            <Link to="/profile">
+              <FontAwesomeIcon icon={faIdCard} /> Profile
+            </Link>
+            <Link to="/social">
+              <FontAwesomeIcon icon={faGlobeAmericas} /> Social
+            </Link>
+            <Link to="/about">
+              <FontAwesomeIcon icon={faInfoCircle} /> About
+            </Link>
           </div>
         </nav>
         <Routes>
-          <Route path="/" element={<Info/>}/>
-          <Route path="/" element={<Social/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Info />} />
+          <Route path="/social" element={<Social />} />
         </Routes>
       </BrowserRouter>
     </div>
