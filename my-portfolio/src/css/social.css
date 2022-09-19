@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  border: none;
+  box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.626);
+  background: rgb(222, 166, 190);
+  background: linear-gradient(157deg, rgba(222, 166, 190, 1) 0%, rgba(216, 177, 210, 1) 45%, rgba(197, 180, 216, 1) 53%, rgba(93, 167, 255, 1) 100%);
+}
+
+.email-info {
+  padding-bottom:2rem;
+  font-size: 1.3rem;
+  line-height: 40px;
+  text-align: center;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-info .social-card {
+  padding:3rem;
+}

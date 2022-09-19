@@ -6,7 +6,7 @@ import { faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Info from './Info'
-import Social from './social'
+import Social from './Social'
 import Home from './Home'
 import './css/navbar.css'
 
@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <nav>
           <div className="main-name">
-            <p>My Portfolio</p>
+            <p>EarthStrix</p>
           </div>
           <div className="link">
             <Link to="/">
@@ -26,13 +26,14 @@ function App() {
               <FontAwesomeIcon icon={faIdCard} /> Profile
             </Link>
             <Link to="/social">
-              <FontAwesomeIcon icon={faGlobeAmericas} /> Social
+              <FontAwesomeIcon icon={faGlobeAmericas} /> Contact
             </Link>
             <Link to="/about">
               <FontAwesomeIcon icon={faInfoCircle} /> About
             </Link>
           </div>
         </nav>
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Info />} />
