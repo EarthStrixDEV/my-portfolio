@@ -30,3 +30,7 @@
 .social-info .social-card {
   padding:3rem;
 }
+
+.social-card label {
+  padding:0.7rem;
+}

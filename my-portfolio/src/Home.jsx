@@ -17,6 +17,14 @@ const Home = () => {
   const [toggleInfo, setToggleInfo] = useState(false);
   const handleToggleInfo = () => setToggleInfo(!toggleInfo);
 
+  const programming_icon = [
+    pythonIcon, javaIcon ,javascriptIcon, cppIcon, csharpIcon
+  ];
+
+  const webTech_icon = [
+    htmlIcon, cssIcon, javascriptIcon, reactIcon
+  ];
+
   return (
     <React.StrictMode>
       <div className="home-container">
@@ -26,13 +34,7 @@ const Home = () => {
             <h1>I'm EarthStrix</h1>
             <h1>Software Developer.</h1>
           </div>
-          <button
-            className="toggle-text-paragraph"
-            type="button"
-            onClick={handleToggleInfo}
-          >
-            Show More <FontAwesomeIcon icon={faInfoCircle} />
-          </button>
+
           <div className="head-text-paragraph">
             <p>
               Inspiration Motivation take you to successful Future of Technology
@@ -40,13 +42,20 @@ const Home = () => {
               Design the best things for the best things The world of Technology
               <br /> improvement and merge anything
             </p>
+            <button
+              className="toggle-text-paragraph"
+              type="button"
+              onClick={handleToggleInfo}
+            >
+              Show More <FontAwesomeIcon icon={faInfoCircle} />
+            </button>
             {toggleInfo ? (
               <div className="head-text-paragraph">
                 <p>
                   I like a Programming & Computer because programming make to
                   <br />
-                  practice creative and critical thinking then you will be able to
-                  create a <br />
+                  practice creative and critical thinking then you will be able
+                  to create a <br />
                   impossible things to possible
                 </p>
               </div>
@@ -59,39 +68,22 @@ const Home = () => {
         <div className="technology-info-container">
           <h2>Programming Languages</h2>
           <div className="technology-info">
-            <div className="technology-info-card">
-              <img src={pythonIcon} alt="" />
-            </div>
-            <div className="technology-info-card">
-              <img src={javaIcon} alt="" />
-            </div>
-            <div className="technology-info-card">
-              <img src={javascriptIcon} alt="" />
-            </div>
-            <div className="technology-info-card">
-              <img src={cppIcon} alt="" />
-            </div>
-            <div className="technology-info-card">
-              <img src={csharpIcon} alt="" />
-            </div>
+            {programming_icon.map((icon) => (
+              <div className="technology-info-card">
+                <img src={icon} alt="" />
+              </div>
+            ))}
           </div>
         </div>
         <hr />
         <div className="technology-info-container">
           <h2>Web Technology</h2>
           <div className="technology-info">
-            <div className="technology-info-card">
-              <img src={htmlIcon} alt="" />
-            </div>
-            <div className="technology-info-card">
-              <img src={cssIcon} alt="" />
-            </div>
-            <div className="technology-info-card">
-              <img src={javascriptIcon} alt="" />
-            </div>
-            <div className="technology-info-card">
-              <img src={reactIcon} alt="" />
-            </div>
+            {webTech_icon.map((icon) => (
+              <div className="technology-info-card">
+                <img src={icon} alt="" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

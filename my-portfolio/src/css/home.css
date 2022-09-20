@@ -28,6 +28,7 @@
 
 .toggle-text-paragraph {
   padding: 0.5rem;
+  margin-top: 0.7rem;
   border-radius: 10px;
   border:1px solid #333;
   cursor:pointer;
