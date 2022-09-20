@@ -6,7 +6,6 @@ import { faMusic } from '@fortawesome/free-solid-svg-icons'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
 import imgPath from './img/293487244_3277032765913228_2764726702069771781_n.jpg'
 import './css/info.css'
-import Footer from './Footer'
 
 const Info = () => {
   const infoProfile = [
@@ -16,6 +15,25 @@ const Info = () => {
     "Hobbies: Coding | surf the internet | learn a programming",
     "Location: Thailand"
   ]
+
+  const icon_aside = [
+    {
+      activities: "Coding",
+      icon: faCode,
+    },
+    {
+      activities: "Internet",
+      icon: faGlobe,
+    },
+    {
+      activities: "Music",
+      icon: faMusic,
+    },
+    {
+      activities: "Movie",
+      icon: faFilm,
+    },
+  ];
 
   return (
     <div>
@@ -34,10 +52,9 @@ const Info = () => {
           </div>
         </section>
         <aside>
-          <p>Coding <FontAwesomeIcon icon={ faCode } /></p>
-          <p>Internet <FontAwesomeIcon icon={ faGlobe } /></p>
-          <p>Music <FontAwesomeIcon icon={ faMusic } /></p>
-          <p>Movie <FontAwesomeIcon icon={ faFilm } /></p>
+          { icon_aside.map((item) => (
+            <p>{item.activities} <FontAwesomeIcon icon={ item.icon } /></p>
+          )) }
         </aside>
         <div className="credit">
           <p>copyright &copy; EarthStrix</p>
