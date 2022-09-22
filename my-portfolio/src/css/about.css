@@ -1,0 +1,51 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: auto;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.427);
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(216, 177, 210, 1) 22%, rgba(197, 180, 216, 1) 51%, rgba(172, 184, 225, 1) 81%, rgba(148, 187, 233, 1) 100%);
+}
+
+.quote-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quote-info-headName ,.experience-info-headName ,.developer-info-headName {
+  padding: 2rem;
+}
+
+.experience-info ,.developer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.experience-text ,.quote-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.developer-text {
+  margin-bottom: 2rem;
+}
+
+.component-info {
+  padding: 1.2rem;
+}

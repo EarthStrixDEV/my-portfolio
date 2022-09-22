@@ -6,8 +6,9 @@ import { faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Info from './Info'
-import Social from './Social'
+import Contact from './Contact'
 import Home from './Home'
+import About from './About'
 import './css/navbar.css'
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
             <Link to="/social">
               <FontAwesomeIcon icon={faGlobeAmericas} /> Contact
             </Link>
-            <Link to="/about">
+            <Link to="/contact">
               <FontAwesomeIcon icon={faInfoCircle} /> About
             </Link>
           </div>
@@ -37,7 +38,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Info />} />
-          <Route path="/social" element={<Social />} />
+          <Route path="/social" element={<Contact />} />
+          <Route path="/contact" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>

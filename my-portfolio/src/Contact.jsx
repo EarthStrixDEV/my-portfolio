@@ -1,9 +1,8 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SocialIcon } from "react-social-icons";
-import './css/social.css'
+import './css/contact.css'
 
-const Social = () => {
+const Contact = () => {
   const Social_info = [
     {
       social_link: "https://twitter.com/EarthWarapon1",
@@ -46,4 +45,4 @@ const Social = () => {
   );
 }
 
-export default Social
+export default Contact
