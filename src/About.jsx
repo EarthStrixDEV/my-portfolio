@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
-
   return (
     <div>
       <div className="about-info">
